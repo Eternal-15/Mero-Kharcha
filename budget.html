@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mero Kharcha-Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">💰 Mero Kharcha</div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="addExpenses.html">Add Expenses</a></li>
+                <li><a href="viewExpenses.html">View Expenses</a></li>
+                <li><a href="budget.html" class="active">Budget</a></li> 
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="budget-container">
+            <h1>Budget Management</h1>
+            <div class="budget-layout">
+                <div class="budget-form-section">
+                    <h2>Set Department Budgets</h2>
+                    <form class="budget-form" id="budgetForm">
+                        <div class="budget-category">
+                            <label for="marketingBudget">Marketing (NPR)</label>
+                            <input type="number" id="marketingBudget" name="marketing" step="0.01" placeholder="0.00" value="100000">
+                        </div>
+                        <div class="budget-category">
+                            <label for="financeBudget">Finance (NPR)</label>
+                            <input type="number" id="financeBudget" name="finance" step="0.01" placeholder="0.00" value="80000">
+                        </div>
+                        <div class="budget-category">
+                            <label for="hrBudget">HR (NPR)</label>
+                            <input type="number" id="hrBudget" name="hr" step="0.01" placeholder="0.00" value="50000">
+                        </div>
+                        <div class="budget-category">
+                            <label for="itBudget">IT (NPR)</label>
+                            <input type="number" id="itBudget" name="it" step="0.01" placeholder="0.00" value="120000">
+                        </div>
+                        <div class="budget-category">
+                            <label for="operationsBudget">Operations (NPR)</label>
+                            <input type="number" id="operationsBudget" name="operations" step="0.01" placeholder="0.00" value="90000">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Update Budget</button>
+                    </form>
+                </div>
+                <div class="budget-progress-section">
+                    <h2>Current Budget Status</h2>
+                    <div class="budget-status-list">
+                        <div class="budget-status-item">
+                            <div class="budget-header">
+                                <span class="department-name">Marketing</span>
+                                <span class="budget-amounts">NPR 55,000 / NPR 100,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <progress value="55" max="100">50</progress>
+                            </div>
+                            <span class="budget-percentage">55% used</span>
+                        </div>
+                        <div class="budget-status-item">
+                            <div class="budget-header">
+                                <span class="department-name">Finance</span>
+                                <span class="budget-amounts">NPR 50,000 / NPR 80,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <progress value="62.5" max="100"></progress>
+                            </div>
+                            <span class="budget-percentage">62.5% used</span>
+                        </div>
+                        <div class="budget-status-item">
+                            <div class="budget-header">
+                                <span class="department-name">HR</span>
+                                <span class="budget-amounts">NPR 25,000 / NPR 50,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <progress value="50" max="100"></progress>
+                            </div>
+                            <span class="budget-percentage">50% used</span>
+                        </div>
+                        <div class="budget-status-item">
+                            <div class="budget-header">
+                                <span class="department-name">IT</span>
+                                <span class="budget-amounts">NPR 60,000 / NPR 120,000</span>
+                            </div>
+                            <div class="progress-bar">
+                               <progress value="50" max="100"></progress>
+                            </div>
+                            <span class="budget-percentage">50% used</span>
+                        </div>
+                        <div class="budget-status-item">
+                            <div class="budget-header">
+                                <span class="department-name">Operations</span>
+                                <span class="budget-amounts">NPR 50,000 / NPR 90,000</span>
+                            </div>
+                            <div class="progress-bar">
+                                <progress value="55.6" max="100"></progress>
+                            </div>
+                            <span class="budget-percentage">55.6% used</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="navigation.js"></script>
+    <script src="budgetManagement.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mero Kharcha-Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">💰 Mero Kharcha</div>
+            <ul class="nav-links">
+                <li><a href="home.html" class="active">Home</a></li>
+                <li><a href="addExpenses.html">Add Expenses</a></li>
+                <li><a href="viewExpenses.html">View Expenses</a></li>
+                <li><a href="budget.html" >Budget</a></li> 
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content"> 
+        <div class="dashboard-grid">
+            <!-- Recent Expense -->
+            <div class="recent-exp">
+                <h3>Recent Expenses</h3>
+                <div class="exp-list">
+                    <div class="exp-item header">
+                        <span class="exp-type">Type</span>
+                        <span class="exp-employee">Employee Name</span>
+                        <span class="exp-team">Team</span>
+                        <span class="exp-amount">Amount</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-type">Office Supplies</span>
+                        <span class="exp-employee">John Doe</span>
+                        <span class="exp-team marketing">Marketing</span>
+                        <span class="exp-amount">Rs. 8,900</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-type">Business Lunch</span>
+                        <span class="exp-employee">Sarah Jade</span>
+                        <span class="exp-team marketing">Marketing</span>
+                        <span class="exp-amount">Rs. 7,550</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-type">Travel Expenses</span>
+                        <span class="exp-employee">Mike Johnson</span>
+                        <span class="exp-team finance">Finance</span>
+                        <span class="exp-amount">Rs. 54,975</span>
+                    </div>
+                    <div class="exp-item">
+                        <span class="exp-type">Client Dinner</span>
+                        <span class="exp-employee">Jennifer Lee</span>
+                        <span class="exp-team marketing">Marketing</span>
+                        <span class="exp-amount">Rs. 12,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Budget Remaining -->
+            <div class="budget-remaining">
+                <h3>Budget Remaining</h3>
+                <div class="budget-list" id="budgetRemainingList">
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span class="budget-department">Marketing</span>
+                            <span class="budget-amount">Rs. 45,000 / Rs. 100,000</span>
+                        </div>
+                        <div class="budget-progress">
+                            <progress value="45" max="100">45</progress>
+                            <span class="budget-percentage">45% remaining</span>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span class="budget-department">Finance</span>
+                            <span class="budget-amount">Rs. 30,000 / Rs. 80,000</span>
+                        </div>
+                        <div class="budget-progress">
+                            <progress value="37.5" max="100">37.5</progress>
+                            <span class="budget-percentage">37.5% remaining</span>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span class="budget-department">HR</span>
+                            <span class="budget-amount">Rs. 25,000 / Rs. 50,000</span>
+                        </div>
+                        <div class="budget-progress">
+                            <progress value="50" max="100">50</progress>
+                            <span class="budget-percentage">50% remaining</span>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span class="budget-department">IT</span>
+                            <span class="budget-amount">Rs. 60,000 / Rs. 120,000</span>
+                        </div>
+                        <div class="budget-progress">
+                            <progress value="50" max="100">50</progress>
+                            <span class="budget-percentage">50% remaining</span>
+                        </div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-info">
+                            <span class="budget-department">Operations</span>
+                            <span class="budget-amount">Rs. 40,000 / Rs. 90,000</span>
+                        </div>
+                        <div class="budget-progress">
+                            <progress value="44.4" max="100">44.4</progress>
+                            <span class="budget-percentage">44.4% remaining</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

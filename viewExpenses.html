@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mero Kharcha-Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">💰 Mero Kharcha</div>
+            <ul class="nav-links">
+                <li><a href="home.html" >Home</a></li>
+                <li><a href="addExpenses.html">Add Expenses</a></li>
+                <li><a href="viewExpenses.html" class="active">View Expenses</a></li>
+                <li><a href="budget.html" >Budget</a></li> 
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="expenses-header">
+            <h1>View Expenses</h1>
+            <div class="expenses-controls">
+                <button class="btn btn-primary" onclick="navigateToPage('newExpense.html')">+ New Expense</button>
+            </div>
+        </div>
+        
+        <div class="expenses-table-container">
+            <table class="expenses-table">
+                <thead>
+                    <tr>
+                        <th>S.N.</th>
+                        <th>DETAILS</th>
+                        <th>TYPE</th>
+                        <th>AMOUNT</th>
+                        <th>DATE</th>
+                    </tr>
+                </thead>
+                <tbody id="expensesTableBody">
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon food">🍽️</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Food Catering</div>
+                                    <div class="expense-subtitle">Team lunch meeting</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Food</td>
+                        <td>NPR 25,100</td>
+                        <td>November 15, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon office">🏢</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Office Supplies</div>
+                                    <div class="expense-subtitle">Stationery and equipment</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Office</td>
+                        <td>NPR 13,300</td>
+                        <td>November 14, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon food">🍽️</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Business Lunch</div>
+                                    <div class="expense-subtitle">Client meeting</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Food</td>
+                        <td>NPR 7,550</td>
+                        <td>November 13, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon travel">✈️</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Travel Expenses</div>
+                                    <div class="expense-subtitle">Business trip</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Travel</td>
+                        <td>NPR 54,975</td>
+                        <td>November 12, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon food">🍽️</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Client Dinner</div>
+                                    <div class="expense-subtitle">Business dinner</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Food</td>
+                        <td>NPR 12,000</td>
+                        <td>November 11, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon accommodation">🏨</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Accommodation</div>
+                                    <div class="expense-subtitle">Hotel stay</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Accommodation</td>
+                        <td>NPR 27,575</td>
+                        <td>November 10, 2024</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            <div class="expense-details">
+                                <span class="expense-icon transport">🚗</span>
+                                <div class="expense-info">
+                                    <div class="expense-title">Transportation</div>
+                                    <div class="expense-subtitle">Taxi and fuel</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Transport</td>
+                        <td>NPR 2,500</td>
+                        <td>November 09, 2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="navigation.js"></script>
+</body>
+</html>
