@@ -28,7 +28,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: monospace;
-    line-height: 1;
+    line-height: 1.6;
     background-color: var(--background-dark);
     color: var(--text-color);
 }
@@ -133,15 +133,15 @@ nav.container {
   grid-template-columns: 2fr 1.5fr 1fr 1fr;
   gap: 16px;
   padding: 16px;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(233, 230, 230, 0.05);
   border-radius: 8px;
   font-size: 0.9rem;
   align-items: center;
 }
 
 .exp-item.header {
-  font-weight: 600;
-  color: #a0aec0;
+  font-weight: 800;
+  color: #e1e4e7;
   background-color: transparent;
 }
 
@@ -156,28 +156,17 @@ nav.container {
 .exp-team {
   padding: 2px 8px;
   border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 500;
 }
 
-.exp-team.marketing {
-  background-color: #fd79a8;
-  color: white;
-}
-
-.exp-team.finance {
-  background-color: #6c5ce7;
-  color: white;
-}
-
 .exp-amount {
   color: var(--text-color);
-  font-weight: 600;
+  font-weight: 800;
   text-align: right;
 }
 
-/* Budget Remaining */
 .budget-remaining {
   grid-column: 3;
   background-color: var(--card-background);
@@ -186,13 +175,13 @@ nav.container {
 .budget-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 }
 
 .budget-item {
-  padding: 16px;
+  padding: 8px;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
 .budget-info {
@@ -214,7 +203,6 @@ nav.container {
 progress{
   width: 99%;
   background-color: var(--primary-color);
-  margin: 4px;
 }
 
 .budget-progress {
@@ -228,7 +216,6 @@ progress{
   font-size: 0.8rem;
 }
 
-/* exps Page */
 .exps-header {
   display: flex;
   justify-content: space-between;
@@ -262,9 +249,10 @@ footer {
 }
 
 .btn {
+  margin-left: 4px;
   padding: 12px 24px;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1rem;
   font-weight: 500;
@@ -295,22 +283,16 @@ footer {
   background-color: var(--border-color);
 }
 
-.btn-full {
-  width: 100%;
+.expenses-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 32px;
 }
-
-/* Expenses Table */
-
-  .expenses-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 32px;
-  }
   
 .expenses-table-container {
   background-color: var(--card-background);
-  border-radius: var(--border-radius-lg);
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
@@ -349,7 +331,7 @@ footer {
 .expense-icon {
   width: 40px;
   height: 40px;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,7 +373,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Forms */
 .expense-form-container,
 .budget-container {
   width: 100%;
@@ -410,7 +391,7 @@ footer {
 .budget-form {
   background-color: var(--card-background);
   padding: 16px;
-  border-radius: var(--border-radius-lg);
+  border-radius: 36px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -431,8 +412,8 @@ footer {
   width: 100%;
   padding: 12px;
   border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  background-color: var(--background-darker);
+  border-radius: 8px;
+  background-color: #3d3170;
   color: var(--text-color);
   font-size: 1rem;
   transition: var(--transition);
@@ -453,27 +434,25 @@ footer {
   margin-top: 32px;
 }
 
-/* Budget Management */
 .budget-layout {
   display: grid;
   grid-template-columns: 40% 60%;
   gap: 16px;
   margin-bottom: 16px;
 }
-.budget-form-section{
-  height: 58%;
-}
+
 .budget-form-section,
 .budget-progress-section {
   background-color: var(--card-background);
   padding: 24px;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  height: max-content;
 }
 
 .budget-form-section h2,
 .budget-progress-section h2 {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
   color: #ffffff;
 }
 
@@ -486,13 +465,13 @@ footer {
 .budget-status-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 8px;
 }
 
 .budget-status-item {
-  padding: 24px;
+  padding: 8px;
   background-color: rgba(255, 255, 255, 0.05);
-  border-radius: var(--border-radius);
+  border-radius: 8px;
 }
 
 .budget-header {
@@ -511,7 +490,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Reports */
 .report-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -531,7 +509,6 @@ footer {
   padding: 32px;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
   .dashboard-grid {
     grid-template-columns: 1fr 1fr;
@@ -602,7 +579,6 @@ footer {
   }
 }
 
-/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -618,7 +594,6 @@ footer {
   animation: fadeIn 0.5s ease;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
