@@ -10,14 +10,19 @@
 <body>
     <nav>
         <div class="container">
-            <div class="logo">💰 Mero Kharcha</div>
-            <ul class="nav-links">
+            <div class="logo"><img src="logo.svg" alt="BugCreator"><a href="home.html">Mero Kharcha</a></div>
+            <ul class="nav-links" id="navMenu">
                 <li><a href="home.html">Home</a></li>
                 <li><a href="addExpenses.html">Add Expenses</a></li>
-                <li><a href="viewExpenses.html">View Expenses</a></li>
-                <li><a href="budget.html" >Budget</a></li> 
-                <li><a href="report.html" class="active">Report</a></li>
+                <li><a href="viewExpenses.html" >View Expenses</a></li>
+                <li><a href="budget.html" >Budget</a></li>
+                <li><a href="report.html"class="active">Report</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -32,7 +37,6 @@
                 </div>
             </div>
 
-            <!-- Yearly Report -->
             <div class="card yearly-report">
                 <h3>Yearly Expenses Overview</h3>
                 <div class="chart-container">
@@ -48,8 +52,5 @@
             </div>
         </div>
     </main>
-
-    <script src="navigation.js"></script>
-    <script src="report.js"></script>
 </body>
 </html>

@@ -10,9 +10,11 @@
     --accent-color: #0004ff;
     --list-color:#36454F;
     --border-color: #4a5568;
-    --success-color: #48bb78;
-    --warning-color: #ed8936;
-    --error-color: #f56565;
+}
+
+img{
+  height: 75px;
+  width: 75px;
 }
 
 h3{
@@ -55,25 +57,39 @@ nav.container {
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    position: relative;
 }
 
-.nav-link {
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1001;
+    margin-right: 16px;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-color);
+    border-radius: 3px;
+    transition: var(--transition);
+    transform-origin: left center;
+}
+
+.nav-links {
     display: flex;
-    list-style: disc;
-    flex-wrap: wrap-reverse;
-    gap: 2rem;
-    padding: 0;
-    margin: 0;
+    gap: 96px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
 }
 
-.nav-links{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap-reverse;
-
-}
-
-.nav-link a {  
+.nav-links a {
     text-decoration: none;
     color: var(--text-color);
     font-weight: 500;
@@ -81,7 +97,7 @@ nav.container {
     font-size: 1.2rem;
 }
 
-.nav-link a:hover{
+.nav-links a:hover {
     color: var(--primary-color);
 }
 
@@ -98,7 +114,7 @@ nav.container {
 }
 
 .main-content {
-  padding: 16px;
+  padding: 12px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -147,10 +163,12 @@ nav.container {
 
 .exp-type {
   color: var(--text-color);
+  font-weight: bolder;
 }
 
 .exp-employee {
-  color: #a0aec0;
+  color: #ffffff;
+  font-size: 16px;
 }
 
 .exp-team {
@@ -158,12 +176,11 @@ nav.container {
   border-radius: 12px;
   font-size: 1rem;
   text-align: center;
-  font-weight: 500;
 }
 
 .exp-amount {
   color: var(--text-color);
-  font-weight: 800;
+  font-weight: bolder;
   text-align: right;
 }
 
@@ -202,7 +219,7 @@ nav.container {
 
 progress{
   width: 99%;
-  background-color: var(--primary-color);
+  background-color: aqua;
 }
 
 .budget-progress {
@@ -510,6 +527,10 @@ margin-bottom: 32px;
 }
 
 @media (max-width: 1024px) {
+     .nav-links {
+        gap: 48px;
+    }
+
   .dashboard-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -524,38 +545,41 @@ margin-bottom: 32px;
 }
 
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 60px;
-    flex-direction: column;
-    background-color: var(--navbar-background);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    padding: 32px 0;
-  }
+    .nav-toggle {
+          display: flex;
 
-  .nav-menu.active {
-    left: 0;
-  }
+      }
+      
+      .nav-links {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 70px);
+          background-color: var(--navbar-background);
+          flex-direction: column;
+          gap: 32px;
+          padding: 32px 0;
+          transition: var(--transition);
+          z-index: 1000;
+      }
+      
+      .nav-links.active {
+          left: 0;
+      }
+      
+      .nav-toggle.active span:nth-child(1) {
+          transform: rotate(45deg) translate(4px, 0px);
+      }
+      
+      .nav-toggle.active span:nth-child(2) {
+          opacity: 0;
+      }
+      
+      .nav-toggle.active span:nth-child(3) {
+          transform: rotate(-45deg) translate(4px, 0px);
+      }
 
-  .nav-toggle {
-    display: flex;
-  }
-
-  .nav-toggle.active span:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-
-  .nav-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .nav-toggle.active span:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
 
   .dashboard-grid {
     grid-template-columns: 1fr;
@@ -577,36 +601,4 @@ margin-bottom: 32px;
   .form-actions {
     flex-direction: column;
   }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.card {
-  animation: fadeIn 0.5s ease;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--background-dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--border-color);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color);
 }

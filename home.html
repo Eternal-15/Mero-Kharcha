@@ -10,14 +10,19 @@
 <body>
     <nav>
         <div class="container">
-            <div class="logo">💰 Mero Kharcha</div>
-            <ul class="nav-links">
+            <div class="logo"><img src="logo.svg" alt="BugCreator"><a href="home.html">Mero Kharcha</a></div>
+            <ul class="nav-links" id="navMenu">
                 <li><a href="home.html" class="active">Home</a></li>
                 <li><a href="addExpenses.html">Add Expenses</a></li>
-                <li><a href="viewExpenses.html">View Expenses</a></li>
-                <li><a href="budget.html" >Budget</a></li> 
+                <li><a href="viewExpenses.html" >View Expenses</a></li>
+                <li><a href="budget.html" >Budget</a></li>
                 <li><a href="report.html">Report</a></li>
             </ul>
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -29,32 +34,32 @@
                     <div class="exp-item header">
                         <h5 class="exp-type">Type</h5>
                         <h5 class="exp-employee">Employee Name</h5>
-                        <h5 class="exp-team">Team</h5>
+                        <h5 class="exp-team">Department</h5>
                         <h5 class="exp-amount">Amount</h5>
                     </div>
                     <div class="exp-item">
-                        <p class="exp-type">Office Supplies</p>
+                        <p class="exp-type">Food Catering</p>
                         <p class="exp-employee">John Doe</p>
                         <p class="exp-team marketing">Marketing</p>
-                        <p class="exp-amount">Rs. 8,900</p>
+                        <p class="exp-amount">Rs. 25,100</p>
                     </div>
                     <div class="exp-item">
-                        <p class="exp-type">Business Lunch</p>
+                        <p class="exp-type">Office Supplies</p>
                         <p class="exp-employee">Sarah Jade</p>
                         <p class="exp-team marketing">Marketing</p>
+                        <p class="exp-amount">Rs. 13,300</p>
+                    </div>
+                    <div class="exp-item">
+                        <p class="exp-type">Food Catering</p>
+                        <p class="exp-employee">Mike Johnson</p>
+                        <p class="exp-team finance">Finance</p>
                         <p class="exp-amount">Rs. 7,550</p>
                     </div>
                     <div class="exp-item">
-                        <p class="exp-type">Travel Expenses</p>
-                        <p class="exp-employee">Mike Johnson</p>
-                        <p class="exp-team finance">Finance</p>
-                        <p class="exp-amount">Rs. 54,975</p>
-                    </div>
-                    <div class="exp-item">
-                        <p class="exp-type">Client Dinner</p>
+                        <p class="exp-type">Travelling</p>
                         <p class="exp-employee">Jennifer Lee</p>
                         <p class="exp-team marketing">Marketing</p>
-                        <p class="exp-amount">Rs. 12,000</p>
+                        <p class="exp-amount">Rs. 54,975</p>
                     </div>
                 </div>
             </div>
@@ -116,5 +121,6 @@
             </div>
         </div>
     </main>
+    <script src="navigation.js"></script>
 </body>
 </html>
